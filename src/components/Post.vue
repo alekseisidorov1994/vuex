@@ -14,7 +14,7 @@
 				</div>
 
 				<div class="post__links">
-					<a href="#" class="edit-link">
+					<a href="#" class="edit-link" @click.prevent="deletePost(post.id)">
 						<i class="far fa-trash-alt"></i>
 						Delete
 					</a>
@@ -66,6 +66,11 @@ export default {
     props:['post'],
     components:{
         Comment
-    }
+	},
+	methods:{
+		deletePost(id){
+			this.$store.dispatch('deletePost', id)
+		}
+	}
 }
 </script>

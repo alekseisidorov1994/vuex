@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -13,6 +14,11 @@ export default new VueRouter({
         {
             path: '/post/:id/edit',
             component: ()=>import('./views/Editor.vue')
+        },
+        {
+            path: '/create_post',
+            component: ()=>import('./views/Creator.vue')
+
         },
         {
             path: '*',

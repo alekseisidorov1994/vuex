@@ -3,9 +3,9 @@
         <div class="container">
             <div class="header__row">
 
-                <a href="index.html" class="header__logo">
+                <router-link to="/" class="header__logo">
                     <i class="fab fa-dev"></i>
-                </a>
+                </router-link>
 
                 <div class="header__search">
                     <div class="search">
@@ -18,6 +18,9 @@
                 </div>
 
                 <div class="header__links">
+                    <router-link to="/create_Post" class="header__link">
+                        CreatePost
+                    </router-link>
                     <a href="#" class="header__link">
                         <i class="fas fa-user"></i>
                     </a>
@@ -31,3 +34,8 @@
     </div>
 
 </template>
+<style>
+.header{
+    z-index: 99999;
+}
+</style>
